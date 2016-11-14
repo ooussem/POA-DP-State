@@ -22,7 +22,7 @@ public class Machine {
         this.state = state.askThe();
     }
 
-    public void give(int somme){
+    public void give(int somme) throws MachineException{
         this.state = state.give(somme);
     }
 
