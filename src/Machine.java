@@ -8,7 +8,8 @@ public class Machine {
     private State state;
     private int c;
 
-    public Machine(){
+    public Machine(int c){
+        this.c = c;
         state = state.give(c);
     }
 
@@ -19,6 +20,7 @@ public class Machine {
     public void askCoffee(){
         state = state.askCafe();
     }
+
     public void askThe(){
         state = state.askThe();
     }
