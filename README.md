@@ -1,2 +1,2 @@
 # poaState
-TD 6 poa State
+TD 6 poa fr.machine.state.State

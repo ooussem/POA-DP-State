@@ -1,5 +1,5 @@
 import fr.machine.state.State;
-import fr.machine.state.StateOne;
+import fr.machine.state.StateAccept;
 
 /**
  * Created by OOussema on 14/11/2016.
@@ -9,16 +9,19 @@ public class Machine {
     private int c;
 
     public Machine(){
-        new StateOne();
+        state = state.give(c);
     }
 
-    void give(int n){
-
-        if((this.c+n)>= 10 ){
-            state = state.askCafe();
-        }
-        else
-            state = state.askThe();
+    public void give(int n){
+        state = state.give(n);
     }
+
+    public void askCoffee(){
+        state = state.askCafe();
+    }
+    public void askThe(){
+        state = state.askThe();
+    }
+
 
 }
