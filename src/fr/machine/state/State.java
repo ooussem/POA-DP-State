@@ -7,7 +7,7 @@ import exception.MachineException;
  */
 public interface State {
     public State give(int n);
-    public State askCafe();
-    public State askThe();
+    public State askCafe() throws MachineException;
+    public State askThe() throws MachineException;
 
 }
