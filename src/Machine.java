@@ -14,6 +14,10 @@ public class Machine {
         this.state = new StateNotAccept(0);
     }
 
+    public void give(int somme) throws MachineException{
+        this.state = state.give(somme);
+    }
+
     public void askCoffee() throws MachineException {
         this.state = state.askCafe();
     }
@@ -22,11 +26,7 @@ public class Machine {
         this.state = state.askThe();
     }
 
-    public void give(int somme) throws MachineException{
-        this.state = state.give(somme);
+    public State getState() {
+        return state;
     }
-
-
-
-
 }

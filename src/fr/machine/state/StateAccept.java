@@ -12,6 +12,8 @@ public class StateAccept implements State {
         this.c = credit;
     }
 
+    public StateAccept() {
+    }
 
     @Override
     public State give(int n) throws MachineException {
